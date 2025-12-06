@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preload" href="fonts/MonumentExtended-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="main.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="components/link-item.js"></script>
+  <script src="components/random-hero-gif.js"></script>
+</head>
+
+<body
+  class="relative bg-[#e6e6e6] dark:bg-black min-h-svh w-full font-body flex justify-center overflow-auto text-black dark:text-[#e0e0e0]">
+  <div id="screen-border"
+    class="fixed z-20 border-5 lg:border-25 inset-0 pointer-events-none border-black dark:border-[#e0e0e0]"></div>
+  <div id="noise-texture" class="fixed bg-[url(assets/noise-texture.gif)] z-0 inset-0 opacity-25 dark:opacity-5"></div>
+
+  <div class="z-10 flex lg:items-center p-5 lg:p-15 opacity-0 animate-[fade-in-up_1s_ease-out_forwards]">
+    <div class="flex flex-col gap-3">
+      <h1 class="font-hero text-5xl lg:text-7xl mb-5 text-center">
+        <span class="lg:hidden">✴<br /></span>
+        DYLAN <span class="hidden lg:inline">✴</span> LÁMONT
+      </h1>
+
+      <div class="flex gap-y-20 gap-x-2 flex-col lg:flex-row">
+        <div class="flex flex-col justify-between flex-1 gap-15">
+          <h2 class="font-hero text-xl lg:text-2xl text-center lg:text-left">SOFTWARE MAKER</h2>
+
+          <ul>
+            <link-item text="GitHub" href="https://github.com/didley" external />
+            <link-item text="LinkedIn" href="https://linkedin.com/in/didleyDev" external />
+            <link-item text="Email" href="mailto:didley.dev@gmail.com" />
+          </ul>
+        </div>
+
+        <div class="flex flex-1 lg:min-h-[400px] justify-center lg:justify-end items-end">
+          <random-hero-gif class="max-w-[300px]"></random-hero-gif>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
